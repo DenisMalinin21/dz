@@ -18,12 +18,50 @@
             <header class="header">
                 <a class="logo" href="index.html"><img src="interior.svg" alt=""></a>
                 <input placeholder="Поиск" class="header__input" type="text">
-                <nav class="header-link">
+                <nav class="header-nav">
                     <ul class="header-link">
                         <li><a class="menu-link" href="catalog.html">Каталог</a></li>
-                        <li><a class="menu-link" href="cart.html">Корзина</a></li>
+                        <li><a class="menu-link menu-link-popup" href="cart.html">Корзина</a></li>
                     </ul>
+                    <div class="popup">
+                        <div class="popup__blok">
+                            <div class="popup__position">
+                                <img class="popup__img" src="stolmenu.jpeg" alt="stolmenu">
+                                <div class="popup__price">
+                                    <div>
+                                        <h4 class="popup__menu">Стол MENU</h4>
+                                        <p class="popup__cost">34 000 руб.</p>
+                                    </div>
+                                    <div class="popup__links">
+                                        <a class="popup__link" href="#">Избранные</a>
+                                        <a class="popup__link" href="#">Удалить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <input class="popup__input" placeholder="name" type="number" value="1" min="1">
+                        </div>
+                        <div class="popup__bloktwo">
+                            <div class="popup__position">
+                                <img class="popup__img" src="divannastan.jpeg" alt="divannastan">
+                                <div class="popup__pricetwo">
+                                    <h4 class="popup__menu">Диван NASTAN</h4>
+                                    <p class="popup__cost">80 000 руб.</p>
+                                    <div class="popup__links">
+                                        <a class="popup__link" href="#">Избранные</a>
+                                        <a class="popup__link" href="#">Удалить</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <input class="popup__input" placeholder="name" type="number" value="1" min="1">
+                        </div>
+                        <div class="popup__press">
+                            <p class="popup__tag">Итого: 114 000 руб.</p>
+                            <button class="popup__button" type="button" class="">Оформить заказ</button>
+                        </div>
+                    </div>
                 </nav>
+
             </header>
         </div>
         <section class="top__content">

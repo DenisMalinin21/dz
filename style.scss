@@ -13,6 +13,7 @@ body {
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 
@@ -39,6 +40,8 @@ a {
 }
   
 
+
+
 .top {
     height: 734px;
     background-image: url(topback.jpeg);
@@ -51,6 +54,10 @@ a {
     margin-top: 60px;
 }
 
+.header-nav {
+    position: relative;
+}
+
 .header-link {
     display: flex;
     justify-content: flex-start;
@@ -60,10 +67,110 @@ a {
     gap: 32px;
 }
 
+.popup{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 573px;
+    padding: 40px 48px;
+    top: 66px;
+    right: 0px;
+    &__blok{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+    &__bloktwo{
+        border-top: 0.5px solid rgba(202, 205, 216, 1);
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    &__position{
+        display: flex;
+        gap: 24px;
+        margin-top: 24px;
+    }
+    &__img{
+        width: 144px;
+        height: 144px;
+    }
+    &__price{
+        width: 169px;
+        height: 144px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__pricetwo{
+        width: 190px;
+        height: 144px;
+    }
+    &__menu{
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 12px;
+    }
+    &__cost{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    &__link{
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 54px;
+    }
+    &__links{
+        display: flex;
+        gap: 24px;
+
+    }
+    &__input{
+        width: 71px;
+        height: 51px;
+        border-radius: 6px;
+        background: rgb(247, 246, 246);
+        text-align: center;
+        font-family: inherit;
+        border: none;
+        margin-top: 24px;
+    }
+    &__press{
+        display: flex;
+        gap: 32px;
+        margin-top: 24px;
+        justify-content: space-between;
+    }
+    &__tag{
+        font-size: 24px;
+        height: 40px;
+    }
+    &__button{
+        width: 207px;
+        height: 40px;
+        box-sizing: border-box;
+        border: 1px solid rgba(4, 4, 4, 1);
+        border-radius: 20px;
+        color: rgba(0, 0, 0, 1);
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        background: border-box;
+    }
+
+}
+
 .menu-link {
     text-decoration: none;
     color: $color-text
 }
+
+.header-nav:hover .popup{
+    display: block;
+}
+
+
+
   
 .title {
     color: $color-text;
@@ -74,6 +181,7 @@ a {
     letter-spacing: 0%;
     text-align: left;
     margin-bottom: 14px;
+    max-width: 792px;
 }
 
 .top__text {
@@ -232,7 +340,7 @@ a {
 .filter__van {
     position: absolute;
     top: calc(100% + 14px);
-    right: 0;
+    right: -15px;
     border-radius: 8px;
     box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
     background: $color-text;
@@ -747,13 +855,20 @@ input[type="checkbox"]:checked::before {
     font-size: 48px;
     margin-top: 64px;
     font-weight: 600;
+    margin-bottom: 35px;
 }
 
 .product-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(378px, 1fr));
     gap: 32px;
-    margin-top: 32px;
+    margin-top: 50px;
+}
+.catalog-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(378px, 1fr));
+    gap: 32px;
+    margin-top: 50px;
 }
 
 .product-card {
@@ -845,7 +960,7 @@ input[type="checkbox"]:checked::before {
     line-height: 59px;
     letter-spacing: 0%;
     text-align: center;
-    margin-top: 64px;
+    margin-top: 12px;
 }
 
 
@@ -937,7 +1052,9 @@ input[type="checkbox"]:checked::before {
     letter-spacing: 0%;
     text-align: left;
 }
-
+.header-nav:hover .popup {
+    display: block;
+}
 .form-input {
     box-sizing: border-box;
     border: 1px solid rgb(196, 196, 196);;
@@ -993,6 +1110,65 @@ input[type="checkbox"]:checked::before {
     line-height: 17px;
     letter-spacing: 0%;
     text-align: left;
+}
+
+@media (max-width:1274px) {
+    .center {
+        margin: 0 auto;
+    }
+
+    .for {
+        &__item {
+            height: 268px;
+            
+        }
+    }
+    .product-box {
+        column-gap: 29px;
+        row-gap: 39px;
+    }
+    .logo-bleck{
+        display: none;
+    }
+
+    .catalog-max{
+        margin: 0 auto;
+    }
+    .catalog-box{
+        column-gap: 29px;
+        row-gap: 30px;
+    }
+
+    .filter__van{
+        display: none;
+    }
+    .cart{
+        display: grid;
+        gap: 32px;
+        margin-top: 64px;
+    }
+    
+}
+
+@media (max-width:833px) {
+    .center {
+        margin: 0 auto;
+    }
+     .catalog-max{
+        margin: 0 auto;
+    }
+}
+@media (max-width:769px) {
+    .center{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+     .catalog-max{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+
 }
 
 @import  'cart'
