@@ -26,6 +26,7 @@
         display: flex;
         justify-content: space-between;
         padding-bottom: 14px;
+        padding-right: 27px;
     }
     &__item{
         border-top: 0.5px solid rgb(202, 205, 216);
@@ -137,10 +138,6 @@
         width: 200px;
         height: 37px;
     }
-    &-katalog{
-        margin-top: 32px;
-        margin-bottom: 65px;
-    }
     &-show{
         color: rgb(0, 0, 0);
         font-family: Montserrat;
@@ -150,6 +147,8 @@
         letter-spacing: 0%;
         text-align: left;
         text-decoration-line: underline;
+        margin-top: 32px;
+        margin-bottom: 65px;
     }
     
 }
@@ -226,9 +225,10 @@
     text-align: center;
 }  
 
-@media (max-width:1274px) {
+@media (max-width:833px) {
     .cart-top{
-        margin: 0 auto;
+        padding-left: 24px;
+        padding-right: 24px;
     }
     
     .cart{
@@ -238,21 +238,79 @@
         flex-wrap: wrap;    
     }
     .heading{
-        margin-top: 66px;
+        margin-top: 64px;
         margin-bottom: 32px;
     }
-    .cart-box{}
-}
-
-@media (max-width:833px){
-    .cart-top {
-        margin: 0 auto;
+    .cart-box{
+        column-gap: 29px;
+        row-gap: 30px;
+    }
+    .logo-bleck{
+        display: none;
     }
 }
 
-@media (max-width:769px){
-    .cart-top{
+@media (max-width:375px) {
+    .cart-top {
         padding-left: 24px;
         padding-right: 24px;
     }
+    .cart-top__title{
+        font-size: 48px;
+        text-align: center;
+        line-height: 59px;
+        padding: 0;
+        margin-top: 82px;
+    }
+    
+    .header{
+        border: none;
+    }
+    .menu-cart{
+        display: flex;
+        align-items: center;
+        gap: 32px   ;
+    }
+    .logo-cart{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .heading{
+        margin-top: 48px;
+    }
+    .cart__img{
+        display: none;
+    }
+    .cart__menu-box{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .cart__text-box{
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .cart__button{
+        display: flex;
+    }
+    .cart__clear{
+        width: 166px;
+    }
+    .cart__form{
+        width:100%;
+    }
+    .cart-box{
+        display: flex;
+        flex-direction: column;
+    }
+    .form-box{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 71px;
+        margin-bottom: 33px;
+    }
+    .cart-show{
+        margin-bottom: 32px;
+    }
 }
+

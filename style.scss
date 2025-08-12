@@ -1,4 +1,4 @@
-@import 'vars'; 
+@import "vars"; 
 
 
 
@@ -168,10 +168,7 @@ a {
 .header-nav:hover .popup{
     display: block;
 }
-
-
-
-  
+ 
 .title {
     color: $color-text;
     font-family: Montserrat;
@@ -237,22 +234,20 @@ a {
     margin-top: 126px;  
 }
 
-.cat-center {
+.cat {
     display: flex;
-    margin-top: 64px;
-    margin-bottom: 36px;
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
+    margin-top: 32px;
     justify-content: space-between;
     align-items: center;
 }
 
-.cat {
+.cat-box{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: flex-end;
     gap: 10px;
+       
 }
 
 .catalog1 {
@@ -340,7 +335,7 @@ a {
 .filter__van {
     position: absolute;
     top: calc(100% + 14px);
-    right: -15px;
+    right: -22px;
     border-radius: 8px;
     box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
     background: $color-text;
@@ -750,7 +745,6 @@ input[type="checkbox"]:checked::before {
     flex: none;
     order: 1;
     flex-grow: 0;
-    margin: 0px 10px;
     color: rgb(0, 0, 0);
     font-family: Montserrat;
     font-size: 16px;
@@ -768,7 +762,6 @@ input[type="checkbox"]:checked::before {
     background-position: right 22px center;
     background-size: 20px 11px;
 }
-
 
 .for-box {
     padding-top: 64px;
@@ -960,7 +953,7 @@ input[type="checkbox"]:checked::before {
     line-height: 59px;
     letter-spacing: 0%;
     text-align: center;
-    margin-top: 12px;
+    margin-top: 64px;
 }
 
 
@@ -1111,12 +1104,16 @@ input[type="checkbox"]:checked::before {
     letter-spacing: 0%;
     text-align: left;
 }
-
-@media (max-width:1274px) {
-    .center {
-        margin: 0 auto;
+.menu-mobi{
+        display: none;
     }
 
+@media (max-width:833px) {
+    .center {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    
     .for {
         &__item {
             height: 268px;
@@ -1132,11 +1129,12 @@ input[type="checkbox"]:checked::before {
     }
 
     .catalog-max{
-        margin: 0 auto;
+        padding-left: 24px;
+        padding-right: 24px;
     }
     .catalog-box{
         column-gap: 29px;
-        row-gap: 30px;
+        row-gap: 49px;
     }
 
     .filter__van{
@@ -1150,25 +1148,162 @@ input[type="checkbox"]:checked::before {
     
 }
 
-@media (max-width:833px) {
-    .center {
-        margin: 0 auto;
-    }
-     .catalog-max{
-        margin: 0 auto;
-    }
-}
-@media (max-width:769px) {
+
+@media (max-width:375px) {
     .center{
-        padding-left: 24px;
-        padding-right: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
-     .catalog-max{
-        padding-left: 24px;
-        padding-right: 24px;
+    .header{
+        padding-top: 32px;
+        &__input{
+            display: none;
+        }
+    }
+    .header-links{
+        display: none;
+    }
+    .logo__img{
+        width: 99px;
+    }
+    .menu-mobi{
+        display: flex;
+        align-items: center;
+        gap: 32px   ;
+    }
+    .title{
+        font-size: 48px;
+        text-align: center;
+    }
+    .top__content{
+        margin-top: 29px;
+        text-align: center;
+    }
+    .top__text{
+        font-size: 16px;
+        margin-top: 16px;
+    }
+    .catalog{
+        margin-top: 16px;
+        font-size: 14px;
+    }
+    .heading-top{
+        font-size: 24px;
+    }
+    .heading{
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: 32px;
+    }
+    .for-box{
+        padding-top: 32px;
+    }
+    .for{
+        grid-template-columns: repeat(4, 1fr);  
+        gap: 16px;
+        &__item{
+            grid-column: 1 / -1;
+            height: 375px;  
+            font-size: 28px;
+            line-height: 34px; 
+        }
+        &__item_big {
+            height: 244px;
+        } 
+    }
+    .product-box{
+        display: flex;
+        flex-direction: column;
+        row-gap: 36px;
+        margin-top: 32px;
+    }
+    .price-catalog{
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: 34px;
+    }
+    .product-card__old-price{
+        font-size: 18px;
+    }
+    .footer{
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+    .subscription-form{
+        
+        display: flex;
+        
+        flex-direction: column;
+    } 
+    .form-box{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 71px;
+        margin-bottom: 33px;
+    }
+
+
+        
+    .catalog-max{
+        width: 343px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .catalog-top{
+        margin-top: 82px;
+        text-align: center;
+        font-size: 48px;
+        width: 100%;
+    }
+    .menu-mobi {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+        
+    .catalog-box{
+        display: flex;
+        flex-direction: column; 
+        row-gap: 33px; 
+    }
+    .product-card__title{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .product-card__price{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .cat{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cat-box{
+        display: flex;
+        gap: 10px;
+        justify-content: flex-start;
+        margin-top: 32px;
+    }
+    .sort{
+        margin-top: 14px;
+    }
+    .filter-block{
+        flex-direction: column-reverse;
+    }
+    .header-link{
+        display: none;
+    }
+    .show-katalog{
+        padding-bottom: 32px;
     }
 
 
 }
 
-@import  'cart'
+
+
+@import "cart";
