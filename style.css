@@ -189,7 +189,6 @@ a {
 }
 
 .catalog-max {
-  width: 100%;
   color: rgb(255, 255, 255);
   height: 400px;
   background-position: center;
@@ -548,7 +547,6 @@ input[type=range]::-webkit-slider-thumb {
   display: flex;
   width: 189px;
   height: 15px;
-  margin-top: 14px;
   gap: 14px;
 }
 
@@ -904,7 +902,7 @@ input[type=checkbox]:checked::before {
   letter-spacing: 0%;
   text-align: left;
   text-decoration-line: underline;
-  margin-bottom: 49px;
+  margin-bottom: 64px;
 }
 
 .show-katalog {
@@ -1029,6 +1027,20 @@ input[type=checkbox]:checked::before {
   margin-right: 20px;
 }
 
+.footer-contacts:hover {
+  text-decoration: underline;
+}
+
+.footer__icon {
+  filter: none;
+  transition: filter 0.3s;
+  cursor: pointer;
+}
+.footer__icon:hover {
+  filter: invert(16%) sepia(99%) saturate(7404%) hue-rotate(0deg) brightness(0%) contrast(100%);
+  color: rgb(0, 0, 0);
+}
+
 .subscription-form input {
   margin-top: 10px;
   padding-left: 17px;
@@ -1100,6 +1112,10 @@ input[type=checkbox]:checked::before {
   background: rgba(222, 215, 215, 0.41);
   color: rgb(0, 0, 0);
 }
+.button-line:hover {
+  background: black;
+  color: white;
+}
 
 .menu-pdv {
   color: rgb(0, 0, 0);
@@ -1158,7 +1174,8 @@ input[type=checkbox]:checked::before {
     row-gap: 49px;
   }
   .filter__van {
-    display: none;
+    right: -237px;
+    border-radius: 0;
   }
   .cart {
     display: grid;
@@ -1310,6 +1327,23 @@ input[type=checkbox]:checked::before {
   }
   .show-katalog {
     padding-bottom: 32px;
+  }
+  .filter__van {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 287px;
+    height: 930px;
+    right: -105px;
+  }
+  .filter__button {
+    display: flex;
+    justify-content: center;
+    width: 190px;
+  }
+  .filter-legend {
+    margin-bottom: 14px;
   }
 }
 .cart-top {

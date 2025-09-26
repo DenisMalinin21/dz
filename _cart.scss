@@ -36,7 +36,7 @@
         justify-content: space-between;
         align-items: flex-start;
     }
-
+    
     &__left {
         display: flex;
         gap: 32px;
@@ -152,6 +152,7 @@
     }
     
 }
+
 .cart-box{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(378px, 1fr));
